@@ -25,8 +25,11 @@
     }}
     
   @include desktop {
+    margin-right: 30px;
     width: calc((100% - 60px) / 3);
-
+&:nth-child(2n) {
+      margin-right: 30px;
+    }
     &:nth-child(3n) {
       margin-right: 0;
     }

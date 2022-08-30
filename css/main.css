@@ -983,7 +983,11 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .works__card {
+    margin-right: 30px;
     width: calc((100% - 60px) / 3);
+  }
+  .works__card:nth-child(2n) {
+    margin-right: 30px;
   }
   .works__card:nth-child(3n) {
     margin-right: 0;
