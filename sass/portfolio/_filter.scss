@@ -1,9 +1,24 @@
 
 .filter.list {
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+margin-bottom: 40px;
+
+  @include tablet {
   justify-content: center;
+   margin-bottom: 30px;
+}
+
+  @include desktop {
+    margin-bottom: 50px;
+      }
 }
 .filter__button {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;;    
+  }
+}
+.filter__button:not(:last-child) {
   margin-right: 8px;
 }
 .filter button {
@@ -24,7 +39,7 @@
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-    &:hover, &:focus {
+      &:hover, &:focus {
   color: #ffffff;
   background-color: var(--accent-color);
   cursor: pointer;

@@ -45,7 +45,7 @@
         <ul class="contacts list">
           <li class="contacts__item">
             <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16px" height="12px">
+              <svg class="contacts__icon mail" width="16px" height="12px">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
 
@@ -54,7 +54,7 @@
           </li>
           <li class="contacts__item">
             <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10px" height="16px">
+              <svg class="contacts__icon tel" width="10px" height="16px">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -156,8 +156,10 @@
       <section class="section">
         <div class="container">
           <h1 class="visually-hidden">Наши работы</h1>
-          <ul class="filter list features__list">
-            <li class="filter__button"><button type="button">Все</button></li>
+          <ul class="filter list">
+            <li class="filter__button">
+              <button type="button">Усі</button>
+            </li>
             <li class="filter__button">
               <button type="button">Веб-сайти</button>
             </li>
@@ -177,12 +179,33 @@
           <ul class="list works">
             <li class="works__card">
               <div class="thumb">
-                <a href="./index.html" target="_blank"
-                  ><img
-                    src="./images/технокряк.jpg"
-                    alt="Технокряк"
-                    width="370"
-                /></a>
+                <a href="./index.html" target="_blank">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/технокряк.jpg    1x,
+                        ./images/технокряк-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/технокряк-tab.jpg    1x,
+                        ./images/технокряк-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/технокряк-моб.jpg    1x,
+                        ./images/технокряк-моб-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/технокряк.jpg" alt="Технокряк" />
+                  </picture>
+                </a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -196,12 +219,33 @@
             </li>
             <li class="works__card">
               <div class="thumb">
-                <a href="./index.html" target="_blank"
-                  ><img
-                    src="./images/постер.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                /></a>
+                <a href="./index.html" target="_blank">
+                  <picture>
+                    <source
+                      srcset="./images/постер.jpg 1x, ./images/постер-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/постер-tab.jpg   1x,
+                        ./images/постер-tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/постер-моб.jpg    1x,
+                        ./images/постер-моб-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/постер.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      
+                    /> </picture
+                ></a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -216,11 +260,33 @@
             <li class="works__card">
               <div class="thumb">
                 <a href="./index.html" target="_blank"
-                  ><img
+                  ><picture>
+                    <source
+                      srcset="./images/ресторан.jpg 1x, 
+                      ./images/ресторан-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/ресторан-tab.jpg   1x,
+                        ./images/ресторан-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/ресторан-mob.jpg    1x,
+                        ./images/ресторан-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
                     src="./images/ресторан.jpg"
                     alt="Ресторан Seafood"
-                    width="370"
-                /></a>
+                    
+                /> </picture
+                ></a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -235,8 +301,31 @@
             <li class="works__card">
               <div class="thumb">
                 <a href="./index.html" target="_blank"
-                  ><img src="./images/Prime.jpg" alt="Проект Prime" width="370"
-                /></a>
+                  >
+                  <picture>
+                    <source
+                      srcset="./images/Prime.jpg 1x, 
+                      ./images/Prime-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/Prime-tab.jpg   1x,
+                        ./images/Prime-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/Prime-mob.jpg    1x,
+                        ./images/Prime-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/Prime.jpg" alt="Проект Prime" 
+                /></picture
+                ></a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -251,8 +340,31 @@
             <li class="works__card">
               <div class="thumb">
                 <a href="./index.html" target="_blank"
-                  ><img src="./images/Boxes.jpg" alt="Проект Boxes" width="370"
-                /></a>
+                  >
+                  <picture>
+                    <source
+                      srcset="./images/Boxes.jpg 1x, 
+                      ./images/Boxes-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/Boxes-tab.jpg   1x,
+                        ./images/Boxes-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/Boxes-mob.jpg    1x,
+                        ./images/Boxes-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/Boxes.jpg" alt="Проект Boxes" 
+                /></picture
+                ></a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -267,11 +379,35 @@
             <li class="works__card">
               <div class="thumb">
                 <a href="./index.html" target="_blank"
-                  ><img
+                  >
+                  <picture>
+                    <source
+                      srcset="./images/inspiration.jpg 1x, 
+                      ./images/inspiration-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-tab.jpg   1x,
+                        ./images/inspiration-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/inspiration-mob.jpg    1x,
+                        ./images/inspiration-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
                     src="./images/inspiration.jpg"
                     alt="Inspiration has no Borders"
-                    width="370"
-                /></a>
+                    
+                /></picture
+                >
+                </a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -286,11 +422,35 @@
             <li class="works__card">
               <div class="thumb">
                 <a href="./index.html" target="_blank"
-                  ><img
+                  >
+                  <picture>
+                    <source
+                      srcset="./images/издание.jpg 1x, 
+                      ./images/издание-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/издание-tab.jpg   1x,
+                        ./images/издание-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/издание-mob.jpg    1x,
+                        ./images/издание-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
                     src="./images/издание.jpg"
                     alt="Издание Limited Edition"
-                    width="370"
-                /></a>
+                    
+                /></picture
+                >
+                </a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -305,8 +465,32 @@
             <li class="works__card">
               <div class="thumb">
                 <a href="./index.html" target="_blank"
-                  ><img src="./images/lab.jpg" alt="Проект LAB" width="370"
-                /></a>
+                  >
+                  <picture>
+                    <source
+                      srcset="./images/lab.jpg 1x, 
+                      ./images/lab-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/lab-tab.jpg   1x,
+                        ./images/lab-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/lab-mob.jpg    1x,
+                        ./images/lab-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/lab.jpg" alt="Проект LAB" 
+                /></picture
+                >
+                </a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -321,11 +505,35 @@
             <li class="works__card">
               <div class="thumb">
                 <a href="./index.html" target="_blank"
-                  ><img
+                  >
+                  <picture>
+                    <source
+                      srcset="./images/business.jpg 1x, 
+                      ./images/business-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/business-tab.jpg   1x,
+                        ./images/business-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/business-mob.jpg    1x,
+                        ./images/business-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
                     src="./images/business.jpg"
                     alt="Growing Business"
-                    width="370"
-                /></a>
+                    
+                /></picture
+                >
+                </a>
                 <p class="works__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати

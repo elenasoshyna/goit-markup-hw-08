@@ -96,12 +96,24 @@
     
     }
   }
-}
-
-.contacts__icon {
+  &__icon {
   fill: currentColor;
   margin-right: 10px;
 }
+  @media screen and (max-width: 767px) {
+    &__icon.mail{
+      width: 14px;
+      height: 10px;
+    }
+
+    &__icon.tel {
+      width: 10px;
+      height: 14px;
+    }
+  }
+}
+
+
 
 .menu-open {
   margin-left: auto;
