@@ -795,11 +795,24 @@ img {
 
 .footer-items {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  text-align: center;
+  gap: 60px;
 }
-
-.contacts-list {
-  margin-right: 70px;
+@media screen and (min-width: 768px) {
+  .footer-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-items {
+    flex-wrap: nowrap;
+    text-align: left;
+  }
 }
 
 .logo-footer {
@@ -830,10 +843,6 @@ img {
   margin-top: 9px;
 }
 
-.social-list {
-  margin-right: 93px;
-}
-
 .join {
   font-weight: 700;
   font-size: 14px;
@@ -854,12 +863,13 @@ img {
   fill: #ffffff;
 }
 
-.subscribe__field {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+@media screen and (min-width: 1200px) {
+  .subscribe__field {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }
-
 .subscribe__email {
   width: 358px;
   height: 50px;
@@ -874,11 +884,16 @@ img {
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
-
 .subscribe__button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__button {
+    margin-top: 0;
+  }
 }
 
 .send-icon {

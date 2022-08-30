@@ -5,11 +5,23 @@
 }
 .footer-items {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  text-align: center;
+  gap: 60px;
+@include tablet {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+    align-items: baseline;
+    text-align: center;
 }
-.contacts-list {
-  margin-right: 70px;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    text-align: left;
+   }
 }
+
 .logo-footer {
   color: #ffffff;
   padding-bottom: 20px;
@@ -34,9 +46,6 @@
   display: block;
   margin-top: 9px;
 }
-.social-list {
-  margin-right: 93px;
-} 
 
 .join {
   font-weight: 700;
@@ -60,30 +69,38 @@
 .social__image.in-footer {
   fill: #ffffff;
 }
-
-.subscribe__field {
-  display: flex;
+.subscribe {
+&__field {
+  @include desktop {
+    display: flex;
   justify-content: center;
   text-align: center;
+  }
 }
-.subscribe__email {
-  width: 358px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: inherit;
-  padding: 15px 16px;
-  margin-right: 12px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-}
-.subscribe__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &__email {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: inherit;
+    padding: 15px 16px;
+    margin-right: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  }
+  &__button {
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    @include desktop {
+      margin-top: 0;
+    }
+  }
 }
 .send-icon {
   margin-left: 10px;
